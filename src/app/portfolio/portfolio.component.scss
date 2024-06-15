@@ -1,0 +1,27 @@
+@import "../../styles.scss";
+.portfolio {
+
+  .image {
+    position: relative;
+    cursor: pointer;
+    &::before {
+      content: "\2b";
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: var(--text-white);
+      width: 100%;
+      background-color: var(--text-dark);
+      height: 100%;
+      font-size: 10rem;
+      @include flex-center;
+      opacity: 0;
+      transition: .3s;
+    }
+    &:hover {
+      &::before {
+        opacity: .7;
+      }
+    }
+  }
+}

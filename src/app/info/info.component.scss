@@ -1,0 +1,20 @@
+@import "../../styles.scss";
+
+.info {
+  background-color: var(--blue);
+  color: var(--text-white);
+  ul {
+    li {
+      height: 2.5rem;
+      width:  2.5rem;
+      border-radius: 50%;
+      border: 1px solid;
+      @include flex-center;
+      cursor: pointer;
+      &:hover {
+        opacity: .8;
+      }
+      transition: .3s;
+    }
+  }
+}

@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root {
+  --text-white: #f9fcfd;
+  --text-dark: #2C3E50;
+  --blue-dark:  #1976d2;
+  --blue: #2196f3;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.bg-my-dark {
+  background-color: var(--text-dark) !important;
+}
+.text-my-dark {
+  color: var(--text-dark);
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head-section {
+  .star {
+    position: relative;
+    width: 25rem;
+    @media (max-width: 480px) {
+      width: 20rem;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: var(--text-dark);
+      height: .75rem;
+      width: 9rem;
+      border-radius: 50rem;
+      @media (max-width: 480px) {
+        width: 7rem;
+      }
+    }
+    &::before {
+      left: 1rem;
+    }
+    &::after {
+      right: 1rem;
+    }
+  }
+}
